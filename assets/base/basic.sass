@@ -1,0 +1,91 @@
+
+html,body
+	height: 100%
+	padding: 0
+	margin: 0
+
+body
+	font: 14px/1 'Open Sans', sans-serif
+	// font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+	// font-size: 14px
+	line-height: 1.42857143
+	color: $default-text
+	// background	: transparent!important;
+
+	@extend %no-select
+
+
+
+// repalce <hr> with extra space
+hr
+	border: none
+	margin: 1em 0 0 0
+
+
+// display
+.inline
+	display: inline
+.inline-block
+	display: inline-block
+.table
+	display: table
+.table-cell
+	display: table-cell
+.table-row
+	display: table-row
+.hidden
+	display: none!important
+
+.fit-parent
+	width: 100%
+.fit-content
+	width: fit-content
+	height: fit-content
+
+
+// position
+.absolute
+	position: absolute
+.fixed
+	position: fixed
+.relative
+	position: relative
+.sticky
+	position: sticky
+
+// direction
+.rtl
+	direction: rtl
+.ltr
+	direction: ltr
+
+// pointer
+.text
+	cursor: text
+.hand
+	cursor: pointer
+
+// disable all events on an element
+.no-events
+	pointer-events: none
+
+// close button
+.close
+	position: absolute
+	top: 0
+	right: 0
+
+// float
+%clearfix
+	&:after
+		content: ''
+		display: table
+		clear: both
+
+.clearfix
+	@extend %clearfix
+
+.pull-left
+	float: left
+.pull-right
+	float: right

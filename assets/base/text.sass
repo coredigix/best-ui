@@ -1,0 +1,148 @@
+// align
+.text
+	&-left
+		text-align: left
+	&-right
+		text-align: right
+	&-center
+		text-align: center
+	&-justify
+		text-align: justify
+
+// vertical align
+.v
+	&-top
+		vertical-align: top
+	&-sub
+		vertical-align: sub
+	&-super
+		vertical-align: super
+	&-baseline
+		vertical-align: baseline
+	&-middle
+		vertical-align: middle
+	&-bottom
+		vertical-align: bottom
+	&-text-top
+		vertical-align: text-top
+	&-text-bottom
+		vertical-align: text-bottom
+
+// weight
+.bold
+	font-weight: bold
+
+// transform
+.capitalize
+	text-transform: capitalize
+.lowercase
+	text-transform: lowercase
+.uppercase
+	text-transform: uppercase
+.small-caps
+	font-variant: small-caps
+
+// decoration
+.overline
+	text-decoration: overline
+.underline
+	text-decoration: underline
+.line-through
+	text-decoration: line-through
+
+// wrap
+.nowrap
+	white-space: nowrap
+.nowrap-ellipsis
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+
+.pre
+	white-space: pre
+.pre-line
+	white-space: pre-line
+.pre-wrap
+	white-space: pre-wrap
+
+
+// overflow
+.scroll
+	overflow: auto
+.scroll-x
+	overflow: auto
+	overflow-y: hidden
+.scroll-y
+	overflow: auto
+	overflow-x: hidden
+.overflow-hidden
+	overflow: hidden
+
+
+// visibility
+.invisible
+	visibility: hidden
+
+// heading
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+	color: $default-heading-color
+	margin: 1rem 0 0 0
+	padding: 0
+	font-weight: 500
+	font-size: 1rem
+	// line-height: 1.2
+
+h1, .h1
+	font-weight: 700
+	// margin: 1rem 0
+	// font-size: 2.5rem
+	// border-bottom: 1px solid $border-color
+
+h2, .h2
+	font-weight: 600
+	// font-size: 2rem
+
+h3, .h3
+	font-weight: 500
+	// font-size: 1.75rem
+
+h4, .h4
+	font-weight: 400
+	// font-size: 1.5rem
+
+h5, .h5
+	font-weight: 400
+	// font-size: 1.25rem
+
+h6, .h6
+	font-weight: 400
+	// font-size: 1rem
+
+// select
+%select
+	-webkit-touch-callout: initial
+	-webkit-user-select: initial
+	-khtml-user-select: initial
+	-moz-user-select: element
+	-ms-user-select: initial
+	user-select: initial
+
+%no-select
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+.select
+	@extend %select
+
+.no-select
+	@extend %no-select
+
+// selection
+::selection
+	background-color: #cce2ff
+	color: rgba(0,0,0,.87)

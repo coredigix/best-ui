@@ -1,0 +1,50 @@
+$mLeft: .25em
+$mTop: $mLeft*0.8
+
+$xs-mleft: $mLeft/2
+$xs-mtop: $mTop/2
+
+$lg-mleft: $mLeft*1.4
+$lg-mtop: $mTop*1.4
+
+
+%margin
+	margin: $mTop $mLeft
+
+%padding
+	padding: $mTop $mLeft
+
+	&.xs
+		padding: $xs-mtop $xs-mleft
+	&.lg
+		padding: $lg-mtop $lg-mleft
+
+// padding for an element with border
+%padding-border
+	padding: calc(#{$mTop} - 1px) calc(#{$mLeft} - 1px)
+
+// mobile
+@media(min-width: 768px)
+	%margin
+		margin: $mTop*2 $mLeft*2
+
+	%padding
+		padding: $mTop*2 $mLeft*2
+		&.xs
+			padding: $xs-mtop*2 $xs-mleft*2
+		&.lg
+			padding: $lg-mtop*2 $lg-mleft*2
+
+	// padding for an element with border
+	%padding-border
+		padding: calc(#{$mTop*2} - 1px) calc(#{$mLeft*2} - 1px)
+		&.xs
+			padding: calc(#{$xs-mtop*2 - 1px) calc(#{$xs-mleft*2 - 1px)
+		&.lg
+			padding: calc(#{$lg-mtop*2 - 1px) calc(#{$lg-mleft*2 - 1px)
+
+.m
+	@extend %margin
+
+.p
+	@extend %padding

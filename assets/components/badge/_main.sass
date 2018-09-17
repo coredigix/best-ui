@@ -1,0 +1,13 @@
+.badge
+	display: inline-block
+	+%padding
+
+	&[data-content]
+		position: relative
+		&:after
+			content: attr('data-badge')
+			display: block
+			position: absolute
+			top: 2em
+			left: 0
+			+%padding
